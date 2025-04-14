@@ -49,9 +49,6 @@ public class decompressZip {
         if (!target.exists()) {
             target.mkdir();
         }
-        if (Build.VERSION.SDK_INT >= UPSIDE_DOWN_CAKE) {
-        dalvik.system.ZipPathValidator.clearCallback();
-        }
         ZipInputStream zipFl= new ZipInputStream(new FileInputStream(this.sourceEntry));
         ZipEntry entry      = zipFl.getNextEntry();
         
